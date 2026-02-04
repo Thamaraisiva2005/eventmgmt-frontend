@@ -1,0 +1,178 @@
+/* ================== DASHBOARD STYLING ================== */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f7f8;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.dashboard {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+/* -------- Header -------- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header h2 {
+  font-size: 28px;
+  color: #444;
+}
+
+.header button {
+  padding: 10px 20px;
+  border: none;
+  background: #ff6b6b;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.header button:hover {
+  background: #ff4c4c;
+}
+
+/* -------- Create Event Form -------- */
+.create-event {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
+  transition: transform 0.3s;
+}
+
+.create-event:hover {
+  transform: translateY(-3px);
+}
+
+.create-event h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.create-event input,
+.create-event textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.create-event input:focus,
+.create-event textarea:focus {
+  border-color: #5dade2;
+  box-shadow: 0 0 5px rgba(93, 173, 226, 0.5);
+  outline: none;
+}
+
+.create-event button {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  background: #5dade2;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.create-event button:hover {
+  background: #3498db;
+  transform: translateY(-2px);
+}
+
+/* -------- Events List -------- */
+#events-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.event-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.event-card h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.event-card p {
+  margin: 6px 0;
+  color: #555;
+  font-size: 14px;
+}
+
+.event-actions {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.event-actions button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.event-actions .edit-btn {
+  background: #f1c40f;
+  color: white;
+}
+
+.event-actions .edit-btn:hover {
+  background: #d4ac0d;
+  transform: translateY(-2px);
+}
+
+.event-actions .delete-btn {
+  background: #e74c3c;
+  color: white;
+}
+
+.event-actions .delete-btn:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+}
+
+/* -------- Responsive -------- */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #events-container {
+    grid-template-columns: 1fr;
+  }
+}

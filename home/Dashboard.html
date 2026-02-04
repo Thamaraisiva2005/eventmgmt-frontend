@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Dashboard</title>
+  <link rel="stylesheet" href="../style/dash.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+  <!-- Header -->
+  <div class="header">
+    <h2>Welcome to Event Dashboard 🎉</h2>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <!-- Create / Update Event -->
+  <div class="create-event">
+    <h3>Create New Event</h3>
+    <input type="text" id="title" placeholder="Event Title">
+    <textarea id="description" placeholder="Event Description"></textarea>
+    <input type="date" id="date">
+    <input type="text" id="location" placeholder="Location">
+    <button onclick="addEvent()">Add Event</button>
+  </div>
+
+  <!-- Event List -->
+  <div>
+    <h3>Upcoming Events</h3>
+    <div id="events-container"></div>
+  </div>
+
+</div>
+
+<script src="../script/dash.js"></script>
+</body>
+</html>
+<script>
+  const token = localStorage.getItem("token");
+  const role = localStorage.getItem("role");
+
+  if (!token || role !== "admin") {
+    alert("Unauthorized access ❌");
+    window.location.href = "index.html";
+  }
+</script>

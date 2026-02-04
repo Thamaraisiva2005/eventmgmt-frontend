@@ -1,0 +1,147 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* PAGE BACKGROUND */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4CAF50, #2E7D32);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CONTAINER */
+.container {
+  background: #ffffff;
+  width: 100%;
+  max-width: 420px;
+  padding: 30px 28px;
+  border-radius: 14px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* TITLE */
+.container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2E7D32;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+/* INPUTS & SELECT */
+.container input,
+.container select {
+  width: 100%;
+  padding: 12px 14px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+/* PLACEHOLDER COLOR */
+.container input::placeholder {
+  color: #999;
+}
+
+/* FOCUS EFFECT */
+.container input:focus,
+.container select:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 6px rgba(76, 175, 80, 0.4);
+}
+
+/* SELECT (ROLE) STYLING */
+.container select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cpath fill='gray' d='M4 6l4 4 4-4z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 16px;
+  cursor: pointer;
+}
+
+/* DISABLED OPTION */
+.container select option[value=""] {
+  color: #999;
+}
+
+/* BUTTON */
+.container button {
+  width: 100%;
+  padding: 13px;
+  margin-top: 14px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #4CAF50, #2E7D32);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* BUTTON HOVER */
+.container button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* BUTTON ACTIVE */
+.container button:active {
+  transform: scale(0.98);
+}
+
+/* FOOTER TEXT */
+.container p {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+/* LINK */
+.container a {
+  color: #4CAF50;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.container a:hover {
+  text-decoration: underline;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 480px) {
+  .container {
+    padding: 24px 20px;
+  }
+
+  .container h2 {
+    font-size: 22px;
+  }
+}
